@@ -1,14 +1,18 @@
-pronouns = ['my', 'your', 'our']
-adjectives = ['awesome', 'amazing', 'fantastic']
-nouns = ['website', 'blog', 'store']
+const pronouns = ['my', 'your', 'our'];
+const adjectives = ['awesome', 'amazing', 'fantastic'];
+const nouns = ['website', 'blog', 'store'];
 
-domain_names = []
+const domainNames = [];
 
-for pronoun in pronouns:
-    for adjective in adjectives:
-        for noun in nouns:
-            domain_names.append(pronoun + adjective + noun + '.com')
+pronouns.forEach(pronoun => {
+    adjectives.forEach(adjective => {
+        nouns.forEach(noun => {
+            domainNames.push(pronoun + adjective + noun + '.com');
+        });
+    });
+});
 
-print("Generated Domain Names:")
-for domain_name in domain_names:
-    print(domain_name)
+console.log("Generated Domain Names:");
+domainNames.forEach(domainName => {
+    console.log(domainName);
+});
