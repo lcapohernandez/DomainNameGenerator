@@ -4,6 +4,9 @@ const nouns = ['website', 'blog', 'store'];
 
 const domainNames = [];
 
+    
+
+
 pronouns.forEach(pronoun => {
     adjectives.forEach(adjective => {
         nouns.forEach(noun => {
